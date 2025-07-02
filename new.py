@@ -11,7 +11,7 @@ from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open(r'C:\Users\Desktop\AI Chat Bot\ChatBot\intents.json').read())
+intents = json.loads(open(r'C:\Users\Hilti\Desktop\ISKUR_AI_AGENT\AI Chat Bot\ISKUR_ChatBot\intents.json').read())
 
 words = []
 classes = []
@@ -65,6 +65,6 @@ model.add(tf.keras.layers.Dense(len(trainY[0]), activation='softmax'))
 sgd = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-hist = model.fit(np.array(trainX), np.array(trainY), epochs=400, batch_size=5, verbose=1)
+hist = model.fit(np.array(trainX), np.array(trainY), epochs=200, batch_size=5, verbose=1)
 model.save('chatbot_model.h5', hist)
 print('Done')
