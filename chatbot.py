@@ -9,7 +9,7 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open(r'C:\Users\Desktop\AI Chat Bot\ChatBot\intents.json').read())
+intents = json.loads(open(r'C:\Users\Hilti\Desktop\ISKUR_AI_AGENT\AI Chat Bot\ISKUR_ChatBot\intents.json').read())
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
